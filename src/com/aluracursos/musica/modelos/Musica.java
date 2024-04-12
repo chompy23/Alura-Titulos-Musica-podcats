@@ -5,14 +5,13 @@ public class Musica extends Titulo implements Listas{
     private String interprete;
     private String interpreteInvitado;
 
-    public Musica(String titulo, int duracion, String autor, String interprete, String interpreteInvitado) {
+
+    public Musica(String titulo, double duracion, String autor, String interprete, String interpreteInvitado) {
         super(titulo, duracion);
         this.autor = autor;
         this.interprete = interprete;
         this.interpreteInvitado = interpreteInvitado;
     }
-
-
 
     public String getAutor() {
         return autor;
@@ -39,9 +38,16 @@ public class Musica extends Titulo implements Listas{
     }
 
     @Override
-    public String playList() {
-        return "";
+    public Titulo playList() {
+        return null;
     }
 
-
+    @Override
+    public String toString() {
+        return "Musica{" +
+                "autor='" + autor + '\'' +
+                ", interprete='" + interprete + '\'' +
+                ", interpreteInvitado='" + interpreteInvitado + '\'' +
+                '}';
+    }
 }

@@ -3,7 +3,8 @@ package com.aluracursos.musica.modelos;
 public class Podcast extends Titulo implements Listas{
 private String tema;
 
-    public Podcast(String titulo, int duracion, String tema) {
+
+    public Podcast(String titulo, double duracion, String tema) {
         super(titulo, duracion);
         this.tema = tema;
     }
@@ -16,10 +17,17 @@ private String tema;
         this.tema = tema;
     }
 
+
+
     @Override
-    public String playList() {
-        return "";
+    public Titulo playList() {
+        return null;
     }
 
-
+    @Override
+    public String toString() {
+        return "Podcast{" +
+                "tema='" + tema + '\'' +
+                '}';
+    }
 }
